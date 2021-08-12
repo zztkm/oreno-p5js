@@ -5,4 +5,4 @@ var e,t=arguments[3];!function(r){"object"==typeof exports&&"undefined"!=typeof 
 },{}],"MYYx":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("p5")),o=function(e){var t=e.color("#2a9d8f"),o=e.color("#e63946"),r=1;e.setup=function(){e.createCanvas(e.windowWidth,e.windowHeight),e.angleMode(e.DEGREES),e.noStroke(),e.background("#131821"),e.blendMode(e.LIGHTEST)},e.draw=function(){e.fill(e.lerpColor(o,t,r)),e.translate(e.width/2,e.height/2),e.rotate(13*e.frameCount),e.ellipse(e.frameCount/2,0,e.frameCount,e.frameCount/4),r*=.995}};new t.default(o);
 },{"p5":"LjmI"}]},{},["MYYx"], null)
-//# sourceMappingURL=/01_ellipseart.53cb27df.js.map
+//# sourceMappingURL=01_ellipseart.53cb27df.js.map
