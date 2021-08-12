@@ -1,5 +1,6 @@
 import p5 from "p5";
 
+/** 参考: https://github.com/ics-creative/210129_p5ts */
 const sketch = (p: p5) => {
 
 	// 描画色1, 2
