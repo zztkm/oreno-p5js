@@ -1,0 +1,22 @@
+{
+  "name": "p5jsdev",
+  "version": "1.0.0",
+  "description": "learn p5.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf dist",
+    "publish": "./scripts/publish.sh"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/p5": "^1.3.0",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "p5": "^1.4.0"
+  }
+}
