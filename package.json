@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html --open",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
     "clean": "rm -rf dist",
-    "publish": "./scripts/publish.sh"
+    "publish": "./scripts/publish"
   },
   "author": "",
   "license": "MIT",
