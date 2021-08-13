@@ -17,6 +17,7 @@ const sketch = (p: p5) => {
 		p.noStroke(); // 線なし(塗りつぶしのみ)に設定
 		p.background("#131821");
 		p.blendMode(p.LIGHTEST); // 合成モードを「LIGHTEST=明るく」に設定
+		console.log("setup finished!")
 	};
 
 	/** フレームごとの描画処理 */

@@ -23,3 +23,8 @@ yarn run build
 
 yarn run publish
 ```
+
+## 使用させてもらった素材
+
+- 音楽
+	- [魔王魂](https://maou.audio/)
