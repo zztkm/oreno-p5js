@@ -29,7 +29,7 @@ const sketch = async (p: p5) => {
 		p.background("#131821");
 	};
 
-	p.keyTyped = () => {
+	const player = () => {
 		if (isPlaying) {
 			isPlaying = false;
 			source.stop();
@@ -37,7 +37,15 @@ const sketch = async (p: p5) => {
 			source = playAudio(ctx, audio);
 			isPlaying = true;
 		};
+	}
+
+	p.keyTyped = () => {
+		player();
 	};
+
+	p.touchStarted = () => {
+		player();
+	}
 };
 
 new p5(sketch)
