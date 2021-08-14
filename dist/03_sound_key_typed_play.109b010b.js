@@ -481,7 +481,7 @@ const sketch = async (p)=>{
         p.createCanvas(p.windowWidth, p.windowHeight);
         p.background("#131821");
     };
-    p.keyTyped = ()=>{
+    const player = ()=>{
         if (isPlaying) {
             isPlaying = false;
             source.stop();
@@ -489,6 +489,12 @@ const sketch = async (p)=>{
             source = playAudio(ctx, audio);
             isPlaying = true;
         }
+    };
+    p.keyTyped = ()=>{
+        player();
+    };
+    p.touchStarted = ()=>{
+        player();
     };
 };
 new _p5Default.default(sketch);
