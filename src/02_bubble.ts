@@ -98,6 +98,10 @@ const sketch = (p: p5) => {
 		lastMouseMoved = p.frameCount;
 	};
 
+	p.touchMoved = () => {
+		lastMouseMoved = p.frameCount;
+	}
+
 	p.windowResized = () => {
 		p.resizeCanvas(p.windowWidth, p.windowHeight);
 	};
