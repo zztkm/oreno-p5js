@@ -1,10 +1,8 @@
 import p5 from "p5";
 
 async function setupAudio(ctx: AudioContext) {
-	const res = await fetch("maou_cyber_43.mp3");
-	console.log(res);
+	const res = await fetch("static/maou_cyber_43.mp3");
 	const arrayBuffer = await res.arrayBuffer();
-	console.log(arrayBuffer);
 	// Web Audio API で使える形式に変換
 	const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
 	return audioBuffer;

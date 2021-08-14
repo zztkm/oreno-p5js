@@ -7,7 +7,8 @@ zztkm の p5.js 作品を保管しておく場所です。
 - [Node.js](https://nodejs.org/ja/)
 
 ```shell
-yarn init
+# install deps
+yarn install
 ```
 
 ## 開発サーバー起動
