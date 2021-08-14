@@ -1,15 +1,29 @@
 import p5 from "p5";
 
-const sketch = (p: p5) => {
+async function setupAudio(ctx: AudioContext) {
+	const res = await fetch("maou_cyber_43.mp3");
+	console.log(res);
+	const arrayBuffer = await res.arrayBuffer();
+	console.log(arrayBuffer);
+	// Web Audio API で使える形式に変換
+	const audioBuffer = await ctx.decodeAudioData(arrayBuffer);
+	return audioBuffer;
+};
 
-	let sound: p5.SoundFile
+function playAudio(ctx: AudioContext, audioBuffer: AudioBuffer) {
+	let source = ctx.createBufferSource();
+	source.buffer = audioBuffer;
+	source.connect(ctx.destination);
+	source.start();
+	return source;
+};
 
-	console.log("start");
+const sketch = async (p: p5) => {
+	const ctx = new AudioContext();
+	let source: AudioBufferSourceNode;
+	let isPlaying = false;
 
-	p.preload = () => {
-		const loadSound = (path: string) => ((p as any) as p5.SoundFile).loadSound(path);
-		sound = loadSound("assets/maou_cyber_43.mp3");
-	};
+	const audio = await setupAudio(ctx);
 
 	/** 初期化 */
 	p.setup = () => {
@@ -18,7 +32,13 @@ const sketch = (p: p5) => {
 	};
 
 	p.keyTyped = () => {
-		sound.play();
+		if (isPlaying) {
+			isPlaying = false;
+			source.stop();
+		} else {
+			source = playAudio(ctx, audio);
+			isPlaying = true;
+		};
 	};
 };
 
