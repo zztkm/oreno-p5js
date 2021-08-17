@@ -14,15 +14,15 @@ yarn install
 ## 開発サーバー起動
 
 ```shell
-yarn run dev
+yarn run start
 ```
 
 ## Github Pages での公開手順
 
 ```shell
-yarn run build
+yarn build
 
-yarn run publish
+yarn deploy
 ```
 
 ## 使用させてもらった素材
