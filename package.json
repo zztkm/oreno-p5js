@@ -25,6 +25,7 @@
     "tailwindcss": "^2.2.7"
   },
   "dependencies": {
+    "ml5": "^0.6.1",
     "p5": "^1.4.0"
   },
   "staticFiles": {
